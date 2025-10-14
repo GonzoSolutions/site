@@ -1,0 +1,19 @@
+.padded[padding="small"] {
+    padding: 0.5rem;
+}
+.padded[padding="medium"] {
+    padding: 1.0rem;
+}
+.padded[padding="large"] {
+    padding: 1.5rem;
+}
+
+.rounded[radius="small"] {
+    border-radius: 0.5rem;
+}
+.rounded[radius="medium"] {
+    border-radius: 1.0rem;
+}
+.rounded[radius="large"] {
+    border-radius: 1.5rem;
+}

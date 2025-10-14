@@ -1,0 +1,14 @@
+body {
+    display: grid;
+    grid: auto 1fr auto / auto;
+    background: #080808;
+
+    font: normal 16px/16px Oxanium;
+    color: #f8f8f8;
+
+    margin: 0;
+    padding: 0;
+
+    width: 100vw;
+    height: 100vh;
+}

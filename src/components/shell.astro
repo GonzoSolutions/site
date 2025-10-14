@@ -1,0 +1,32 @@
+---
+import "@styles/global.css";
+import "@styles/typography.css";
+import "@styles/utility.css";
+---
+<!DOCTYPE html>
+
+<html lang={Astro.props.lang}>
+  <head>
+    <meta charset={Astro.props.charset} />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+    <title>
+        {Astro.props.title}
+    </title>
+    <link rel="icon" type="image/png" href="/icon.png" />
+  </head>
+  <body>
+    <header>
+    </header>
+    <content>
+      <aside id="left">
+      </aside>
+      <main>
+        <slot id="main" />
+      </main>
+      <aside id="right">
+      </aside>
+    </content>
+    <footer>
+    </footer>
+  </body>
+</html>

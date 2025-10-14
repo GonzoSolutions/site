@@ -1,0 +1,35 @@
+---
+---
+<section id={Astro.props.id} style={`background: ${Astro.props.color}`}>
+    <aside id="left">
+    </aside>
+    <content class="padded">
+        <slot name="content" />
+    </content>
+    <aside id="right">
+    </aside>
+</section>
+
+<style>
+
+section {
+    display: grid;
+    grid: auto / auto 800px auto;
+}
+
+section > aside {}
+section > content {
+    display: block;
+    overflow: hidden;
+    width: inherit;
+    height: inherit;
+    position: relative;
+}
+
+@media (width <= 600px) {
+    section {
+        display: block;
+    }
+}
+
+</style>

@@ -1,0 +1,15 @@
+{
+  "name": "test",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --config .config/astro.js",
+    "build": "astro build --config .config/astro.js"
+  },
+  "dependencies": {
+    "@types/bun": "latest",
+    "astro": "^5.14.4",
+    "vite": "^7.1.9"
+  }
+}

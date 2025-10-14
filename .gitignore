@@ -1,0 +1,5 @@
+.astro/
+.bun/
+.vite/
+
+node_modules/
