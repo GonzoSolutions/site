@@ -1,6 +1,13 @@
 ---
 import Shell from '@components/shell.astro';
 import Section from '@components/section.astro';
+import Banner from '@components/banner.astro';
+
+const name = { primary: "gonzo", secondary: "solutions" }
+const slogan = ["immerse", "understand", "execute"];
 ---
 <Shell lang="en" charset="utf-8" title="GONZO">
+    <Section name="banner" background="none">
+        <Banner slot="content" name={name} slogan={slogan} />
+    </Section>
 </Shell>
