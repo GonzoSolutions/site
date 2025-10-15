@@ -1,11 +1,12 @@
 {
-  "name": "test",
-  "version": "0.0.0",
-  "private": true,
+  "name": "site",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
+    "astro": "astro --config .config/astro.js", 
     "dev": "astro dev --config .config/astro.js",
-    "build": "astro build --config .config/astro.js"
+    "build": "astro build --config .config/astro.js", 
+    "preview": "astro preview --config .config/astro.js"
   },
   "dependencies": {
     "@types/bun": "latest",
