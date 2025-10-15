@@ -1,0 +1,30 @@
+---
+---
+<overlay>
+    <header class="centered">
+        <slot name="header" />
+    </header>
+    <content class="centered">
+        <slot name="content" />
+    </content>
+    <footer class="centered">
+        <slot name="footer" />
+    </footer>
+</overlay>
+
+<style>
+
+overlay {
+    background: rgba(0, 0, 0, 0.75);
+    display: grid;
+    grid: auto 1fr auto / auto;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+}
+
+overlay header {}
+overlay footer {}
+overlay content {}
+
+</style>
