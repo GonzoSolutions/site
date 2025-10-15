@@ -1,16 +1,16 @@
 ---
 ---
 <card class="bordered rounded" radius="medium" style={`background: ${Astro.props.background}`}>
-    <header class="padded" padding="medium">
-        header
+    <header>
+        <slot name="header" />
     </header>
     <content>
         <main>
             <slot name="content" />
         </main>
     </content>
-    <footer class="padded" padding="medium">
-        footer
+    <footer>
+        <slot name="footer" />
     </footer>
 </card>
 
