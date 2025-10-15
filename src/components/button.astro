@@ -1,6 +1,7 @@
 ---
+const { padding, radius } = Astro.props;
 ---
-<button class="padded rounded cased" padding="medium" radius="small" case="upper">
+<button class="padded rounded cased" padding={padding} radius={radius} case="upper">
     <slot />
 </button>
 
@@ -8,6 +9,7 @@
 
 button {
     background: #ff2a3a;
+    width: 100%;
 }
 
 button:hover {
