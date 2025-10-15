@@ -15,7 +15,7 @@
     border-radius: 1.0rem;
 }
 .rounded[radius="large"] {
-    border-radius: 2rem;
+    border-radius: 1.5rem;
 }
 
 .flexed[flex="grow"] { flex: 1; }
