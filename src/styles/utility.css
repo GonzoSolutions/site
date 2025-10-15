@@ -17,3 +17,12 @@
 .rounded[radius="large"] {
     border-radius: 1.5rem;
 }
+
+.shadowed {
+    box-shadow: 0 0 0.5rem #000000;
+    text-shadow: 0 0 0.5rem #000000;
+}
+
+.bordered {
+    border: 1px solid #202020;
+}
