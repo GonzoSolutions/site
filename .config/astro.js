@@ -1,8 +1,5 @@
 export default {
     base: '/site', 
-    srcDir: 'src', 
-    publicDir: 'public', 
-    outDir: 'out', 
     server: {
         port: 9000, 
     }, 
