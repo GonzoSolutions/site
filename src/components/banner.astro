@@ -1,0 +1,53 @@
+---
+---
+<banner>
+    <aside></aside>
+    <content class="aligned padded" alignment="center" padding="small">
+        <div id="name" class="aligned cased padded" alignment="center" case="upper" padding="medium">
+            <div id="primary">
+                {Astro.props.name.primary}
+            </div>
+            <div id="secondary">
+                {Astro.props.name.secondary}
+            </div>
+        </div>
+        <div id="slogan" class="aligned cased padded" alignment="center" case="upper" padding="medium">
+            {
+                Astro.props.slogan.map(word => <div id="word">{word}</div>)
+            }
+        </div>
+    </content>
+    <aside></aside>
+</banner>
+
+<style>
+
+banner {}
+banner aside {}
+banner content {}
+
+banner content #name {
+    color: #f8f8f8;
+}
+
+banner content #name #primary {
+    display: block;
+    font: bold 3rem/3rem Oxanium;
+}
+banner content #name #secondary {
+    display: block;
+    font: bold 1.5rem/1.5rem Oxanium;
+}
+
+banner #slogan {
+    display: flex;
+    color: #ff2a3a;
+}
+
+banner #slogan #word {
+    display: block;
+    flex: 1 0 auto;
+    font: bold 1rem/1rem Oxanium;
+}
+
+</style>
