@@ -2,8 +2,11 @@
 import Shell from '@components/shell.astro';
 import Section from '@components/section.astro';
 import Banner from '@components/banner.astro';
+import Grid from '@components/grid.astro';
+import Box from '@components/box.astro';
 import Card from '@components/card.astro';
 import Image from '@components/image.astro';
+import Button from '@components/button.astro';
 import Overlay from '@components/overlay.astro';
 
 const name = { primary: "gonzo", secondary: "solutions" }
@@ -26,46 +29,35 @@ const team = [
         "name": { "first": "Vu", "middle": "", "last": "Tran" }, 
         "alias": "vu-tran", 
         "title": "CFO"
-    }
+    }, 
 ];
 ---
-<Shell lang="en" charset="utf-8" title="GONZO">
+<Shell lang="en" charset="utf-8" title="GONZO" base="/site">
     <Section name="banner" background="none">
         <Banner slot="content" name={name} slogan={slogan} />
     </Section>
+
     <Section name="team" background="#181818">
-        <div slot="content" class="grid shadowed bordered padded rounded" padding="medium" radius="large" style="background: #101010">
-            {
-                team.map(
-                    member =>
-                        <Card background="#181818">
-                            <!--
-                            <div slot="header" class="padded" padding="medium">
-                            </div>
-                            -->
-                            <Image slot="content" width="100%" height="100%" source="https://thispersondoesnotexist.com/" /> 
-                            <Overlay slot="content">
-                                <div slot="header" class="padded aligned cased" padding="medium" alignment="center" case="upper"> {member.name.first} {member.name.last} </div>
-                                <div slot="footer" class="padded aligned cased" padding="medium" alignment="center" case="upper"> {member.title} </div>
-                            </Overlay>
-                            <!--
-                            <div slot="footer" class="padded" padding="medium">
-                            </div>
-                            -->
-                        </Card>
-                )
-            }
-        </div>
+        <Box slot="content" color="#101010" padding="medium" radius="medium">
+            <Grid gap="1">
+                {
+                    team.map(
+                        member =>
+                            <Card color="#181818" radius="small">
+                                <Image slot="header" width="100%" height="100%" source="https://thispersondoesnotexist.com/" /> 
+                                <Overlay slot="header">
+                                    <div slot="header" class="padded aligned cased" padding="medium" alignment="center" case="upper"> </div>
+                                    <div slot="footer" class="padded aligned cased" padding="medium" alignment="center" case="upper"> {member.name.first} {member.name.last} </div>
+                                </Overlay>
+                                <div slot="footer" class="padded flexed" padding="small" align="center" flex="grow" style="background: #202020">
+                                    <Button color="#ff2a3a" padding="medium" radius="small">
+                                        CHAT
+                                    </Button>
+                                </div>
+                            </Card>
+                    )
+                }
+            </Grid>
+        </Box>
     </Section>
 </Shell>
-
-<style>
-
-.grid {
-    display: grid;
-    grid: auto / repeat(3, 1fr);
-    gap: 1rem;
-    background: #101010;
-}
-
-</style>
