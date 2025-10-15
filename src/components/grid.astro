@@ -1,0 +1,15 @@
+---
+const { gap } = Astro.props;
+---
+<grid style={`gap: ${gap}rem`}>
+    <slot />
+</grid>
+
+<style>
+
+grid {
+    display: grid;
+    grid: auto / repeat(auto-fill, minmax(200px,1fr));
+}
+
+</style>
