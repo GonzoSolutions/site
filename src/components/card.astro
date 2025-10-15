@@ -1,7 +1,7 @@
 ---
 const { radius, color } = Astro.props;
 ---
-<card class="bordered rounded" radius={radius} style={`background: ${Astro.props.color}`}>
+<card class="rounded" radius={radius} style={`background: ${Astro.props.color}`}>
     <header>
         <main>
             <slot name="header" />
@@ -55,18 +55,20 @@ card header main {
     width: 100%;
     height: 100%;
     position: relative;
+    justify-content: center;
 }
 card footer main {
-    display: flex;
     width: 100%;
     height: 100%;
     position: relative;
+    justify-content: center;
 }
 card content main {
     display: flex;
     width: 100%;
     height: 100%;
     position: relative;
+    justify-content: center;
 }
 
 </style>
