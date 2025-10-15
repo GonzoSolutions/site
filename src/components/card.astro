@@ -2,7 +2,9 @@
 ---
 <card class="bordered rounded" radius="medium" style={`background: ${Astro.props.background}`}>
     <header>
-        <slot name="header" />
+        <main>
+            <slot name="header" />
+        </main>
     </header>
     <content>
         <main>
@@ -10,7 +12,9 @@
         </main>
     </content>
     <footer>
-        <slot name="footer" />
+        <main>
+            <slot name="footer" />
+        </main>
     </footer>
 </card>
 
@@ -26,9 +30,18 @@ card {
     position: relative;
 }
 
-card header {}
-card footer {}
-
+card header {
+    display: flex;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+}
+card footer {
+    display: flex;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+}
 card content {
     display: flex;
     overflow: hidden;
@@ -36,11 +49,23 @@ card content {
     height: auto;
 }
 
+card header main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+card footer main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
 card content main {
     display: flex;
     width: 100%;
     height: 100%;
     position: relative;
 }
-    
+
 </style>
