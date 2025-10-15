@@ -1,7 +1,7 @@
 ---
-const { color, padding } = Astro.props;
+const { color, padding, radius } = Astro.props;
 ---
-<box style={`background: ${color}`} class="bordered padded rounded" padding={padding} radius="medium">
+<box style={`background: ${color}`} class="padded rounded" padding={padding} radius={radius}>
     <slot />
 </box>
 
@@ -9,6 +9,7 @@ const { color, padding } = Astro.props;
 
 box {
     display: block;
+    overflow: hidden;
 }
 
 </style>
