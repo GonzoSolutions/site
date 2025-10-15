@@ -1,6 +1,7 @@
 ---
+const { radius, color } = Astro.props;
 ---
-<card class="bordered rounded" radius="small" style={`background: ${Astro.props.background}`}>
+<card class="bordered rounded" radius={radius} style={`background: ${Astro.props.color}`}>
     <header>
         <main>
             <slot name="header" />
