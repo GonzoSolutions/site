@@ -1,9 +1,9 @@
 ---
 ---
-<section id={Astro.props.id} style={`background: ${Astro.props.color}`}>
+<section name={Astro.props.name} style={`background: ${Astro.props.background}`}>
     <aside id="left">
     </aside>
-    <content class="padded">
+    <content class="padded" padding="medium">
         <slot name="content" />
     </content>
     <aside id="right">
